@@ -1,0 +1,27 @@
+// @file			Code_Decoder
+// @detail		Seven segment code decoder
+// @author		212241803537-zhaoqicheng
+// @date			2022-10-29
+module Code_Decoder(D3,D2,D1,D0,a,b,c,d,e,f,g,h);
+
+input D3,D2,D1,D0;
+output reg a,b,c,d,e,f,g,h;
+
+always@(D3,D2,D1,D0)
+begin
+case({D3,D2,D1,D0})
+  4'd0:{h,g,f,e,d,c,b,a}=8'b1100_0000;
+  4'd1:{h,g,f,e,d,c,b,a}=8'b1111_1001;
+  4'd2:{h,g,f,e,d,c,b,a}=8'b1010_0100;
+  4'd3:{h,g,f,e,d,c,b,a}=8'b1011_0000;
+  4'd4:{h,g,f,e,d,c,b,a}=8'b1001_1001;
+  4'd5:{h,g,f,e,d,c,b,a}=8'b1001_0010;
+  4'd6:{h,g,f,e,d,c,b,a}=8'b1000_0010;
+  4'd7:{h,g,f,e,d,c,b,a}=8'b1111_1000;
+  4'd8:{h,g,f,e,d,c,b,a}=8'b1000_0000;
+  4'd9:{h,g,f,e,d,c,b,a}=8'b1001_0000;
+default:{h,g,f,e,d,c,b,a}=8'b1111_1111;
+endcase
+end
+
+endmodule

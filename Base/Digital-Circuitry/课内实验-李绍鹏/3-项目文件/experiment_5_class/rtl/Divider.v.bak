@@ -1,0 +1,9 @@
+module Divider (clk,fout)
+
+input clk
+output fout
+
+always@ (posedge clk)
+	begin
+		
+	end

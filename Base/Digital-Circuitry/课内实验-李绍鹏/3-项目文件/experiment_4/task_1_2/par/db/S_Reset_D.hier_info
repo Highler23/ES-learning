@@ -1,0 +1,16 @@
+|S_Reset_D
+clk => nq[0]~reg0.CLK
+clk => nq[1]~reg0.CLK
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+reset => nq[1]~reg0.DATAIN
+reset => q.OUTPUTSELECT
+reset => nq.OUTPUTSELECT
+d => q.DATAA
+d => nq.DATAA
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq[0] <= nq[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nq[1] <= nq[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,13 @@
+module Selector_8_1 (N,Y);
+
+input N;
+output Y;
+wire [3:0] N;
+reg Y;
+
+always@ (N)
+	begin
+	
+	end
+
+endmodule

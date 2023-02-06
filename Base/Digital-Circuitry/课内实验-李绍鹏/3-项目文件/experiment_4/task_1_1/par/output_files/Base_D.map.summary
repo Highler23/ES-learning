@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 06 22:12:42 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Base_D
+Top-level Entity Name : Base_D
+Family : Cyclone II
+Total logic elements : 2
+    Total combinational functions : 1
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

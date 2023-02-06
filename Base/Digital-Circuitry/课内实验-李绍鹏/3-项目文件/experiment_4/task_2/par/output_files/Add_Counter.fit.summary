@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Nov 06 22:16:35 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Add_Counter
+Top-level Entity Name : Add_Counter
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 9 / 8,256 ( < 1 % )
+    Total combinational functions : 9 / 8,256 ( < 1 % )
+    Dedicated logic registers : 5 / 8,256 ( < 1 % )
+Total registers : 5
+Total pins : 9 / 138 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

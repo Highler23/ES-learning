@@ -1,0 +1,10 @@
+|Number_Selector
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+Y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+A1 => Mux0.IN4
+A0 => Mux0.IN5
+
+

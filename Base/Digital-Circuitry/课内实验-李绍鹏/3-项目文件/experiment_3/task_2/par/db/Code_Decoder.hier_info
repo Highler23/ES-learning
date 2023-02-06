@@ -1,0 +1,15 @@
+|Code_Decoder
+D3 => Decoder0.IN0
+D2 => Decoder0.IN1
+D1 => Decoder0.IN2
+D0 => Decoder0.IN3
+a <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+h <= <VCC>
+
+

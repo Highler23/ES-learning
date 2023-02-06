@@ -1,0 +1,4 @@
+/**
+ * @file		Electronic-Chronograph-Stopwatch
+ */
+module Time_Watch ()

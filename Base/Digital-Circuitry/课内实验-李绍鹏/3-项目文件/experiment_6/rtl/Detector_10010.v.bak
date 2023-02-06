@@ -1,0 +1,5 @@
+/**
+ * @file		10010_sequence_detector
+ * @input
+ */
+module Detector_10010 ()

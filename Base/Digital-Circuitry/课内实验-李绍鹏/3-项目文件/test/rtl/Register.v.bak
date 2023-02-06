@@ -1,0 +1,20 @@
+module Register(EN,Q,D,CLR);
+input  EN,CLR;
+input  [7:0] D;
+output  reg [7:0] Q;
+
+//trig T1 (.clk(EN),.D(D[0]),.Q(Q[0]));
+//trig T2 (.clk(EN),.D(D[1]),.Q(Q[1]));
+//trig T3 (.clk(EN),.D(D[2]),.Q(Q[2]));
+//trig T4 (.clk(EN),.D(D[3]),.Q(Q[3]));
+//trig T5 (.clk(EN),.D(D[4]),.Q(Q[4]));
+//trig T6 (.clk(EN),.D(D[5]),.Q(Q[5]));
+//trig T7 (.clk(EN),.D(D[6]),.Q(Q[6]));
+//trig T8 (.clk(EN),.D(D[7]),.Q(Q[7]));
+
+always@(posedge EN)
+begin 
+	Q<=D;
+end 
+
+endmodule

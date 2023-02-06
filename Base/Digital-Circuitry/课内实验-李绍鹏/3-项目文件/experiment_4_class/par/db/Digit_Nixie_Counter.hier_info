@@ -1,0 +1,46 @@
+|Digit_Nixie_Counter
+clk => fout.CLK
+clk => Q[0].CLK
+clk => Q[1].CLK
+clk => Q[2].CLK
+clk => Q[3].CLK
+clk => Q[4].CLK
+clk => Q[5].CLK
+clk => Q[6].CLK
+clk => Q[7].CLK
+clk => Q[8].CLK
+clk => Q[9].CLK
+clk => Q[10].CLK
+clk => Q[11].CLK
+clk => Q[12].CLK
+clk => Q[13].CLK
+clk => Q[14].CLK
+clk => Q[15].CLK
+clk => Q[16].CLK
+clk => Q[17].CLK
+clk => Q[18].CLK
+clk => Q[19].CLK
+clk => Q[20].CLK
+clk => Q[21].CLK
+clk => Q[22].CLK
+clk => Q[23].CLK
+clk => Q[24].CLK
+clk => Q[25].CLK
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cout[0] <= <VCC>
+cout[1] <= <VCC>
+cout[2] <= <VCC>
+cout[3] <= <VCC>
+cout[4] <= <VCC>
+cout[5] <= <VCC>
+cout[6] <= <VCC>
+cout[7] <= <GND>
+
+

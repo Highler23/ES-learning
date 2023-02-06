@@ -1,0 +1,409 @@
+Analysis & Synthesis report for Nixie_Display
+Sat Nov 19 11:50:25 2022
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "BCD_7_Seg:U5"
+ 10. Port Connectivity Checks: "Selector_8_1:U4"
+ 11. Port Connectivity Checks: "count_8:U2"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 19 11:50:25 2022       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; Nixie_Display                               ;
+; Top-level Entity Name              ; Nixie_Display                               ;
+; Family                             ; Cyclone II                                  ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 17                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C8Q208C8        ;                    ;
+; Top-level entity name                                                      ; Nixie_Display      ; Nixie_Display      ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+; ../rtl/Divider.v                 ; yes             ; User Verilog HDL File  ; H:/code/digital-electronic-technology/lab/experiment_5_class/rtl/Divider.v       ;         ;
+; ../rtl/count_8.v                 ; yes             ; User Verilog HDL File  ; H:/code/digital-electronic-technology/lab/experiment_5_class/rtl/count_8.v       ;         ;
+; ../rtl/Decoder_3_8.v             ; yes             ; User Verilog HDL File  ; H:/code/digital-electronic-technology/lab/experiment_5_class/rtl/Decoder_3_8.v   ;         ;
+; ../rtl/Selector_8_1.v            ; yes             ; User Verilog HDL File  ; H:/code/digital-electronic-technology/lab/experiment_5_class/rtl/Selector_8_1.v  ;         ;
+; ../rtl/BCD_7_Seg.v               ; yes             ; User Verilog HDL File  ; H:/code/digital-electronic-technology/lab/experiment_5_class/rtl/BCD_7_Seg.v     ;         ;
+; ../rtl/Nixie_Display.v           ; yes             ; User Verilog HDL File  ; H:/code/digital-electronic-technology/lab/experiment_5_class/rtl/Nixie_Display.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 17    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |Nixie_Display             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |Nixie_Display      ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD_7_Seg:U5"                                                                                                                              ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                     ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; BCD  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "BCD[3..1]" will be connected to GND. ;
++------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Selector_8_1:U4"                                                                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "a[7..4]" will be connected to GND. ;
+; a[2..0] ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; a[7]    ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; b       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "b[7..4]" will be connected to GND. ;
+; b[2..0] ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; b[7]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; c       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "c[7..4]" will be connected to GND. ;
+; c[2..1] ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; c[7]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; c[4]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; d       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "d[7..4]" will be connected to GND. ;
+; d[7]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; d[6]    ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; d[5]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; d[4]    ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; e       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "e[7..4]" will be connected to GND. ;
+; e[1..0] ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; e[7]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; e[6]    ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; f       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "f[7..4]" will be connected to GND. ;
+; f[1..0] ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; f[3..2] ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; g       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "g[7..4]" will be connected to GND. ;
+; g[3..2] ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; g[5]    ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; g[4]    ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; h       ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "h[7..4]" will be connected to GND. ;
+; h[3..1] ; Input  ; Info     ; Stuck at GND                                                                                                                              ;
+; h[4]    ; Input  ; Info     ; Stuck at VCC                                                                                                                              ;
+; Y       ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (4 bits) it drives; bit(s) "Y[7..4]" have no fanouts                      ;
+; Y       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "count_8:U2"                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                              ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; Q    ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[2..1]" have no fanouts ;
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Sat Nov 19 11:50:25 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Nixie_Display -c Nixie_Display
+Info (11104): Parallel Compilation has detected 16 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 8 of the 8 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /code/digital-electronic-technology/lab/experiment_5_class/rtl/divider.v
+    Info (12023): Found entity 1: Divider
+Info (12021): Found 1 design units, including 1 entities, in source file /code/digital-electronic-technology/lab/experiment_5_class/rtl/count_8.v
+    Info (12023): Found entity 1: count_8
+Info (12021): Found 1 design units, including 1 entities, in source file /code/digital-electronic-technology/lab/experiment_5_class/rtl/decoder_3_8.v
+    Info (12023): Found entity 1: Decoder_3_8
+Info (12021): Found 1 design units, including 1 entities, in source file /code/digital-electronic-technology/lab/experiment_5_class/rtl/selector_8_1.v
+    Info (12023): Found entity 1: Selector_8_1
+Info (12021): Found 1 design units, including 1 entities, in source file /code/digital-electronic-technology/lab/experiment_5_class/rtl/bcd_7_seg.v
+    Info (12023): Found entity 1: BCD_7_Seg
+Info (12021): Found 1 design units, including 1 entities, in source file /code/digital-electronic-technology/lab/experiment_5_class/rtl/nixie_display.v
+    Info (12023): Found entity 1: Nixie_Display
+Warning (10236): Verilog HDL Implicit Net warning at Nixie_Display.v(10): created implicit net for "clk_400HZ"
+Warning (10236): Verilog HDL Implicit Net warning at Nixie_Display.v(11): created implicit net for "Scan_cnt"
+Warning (10236): Verilog HDL Implicit Net warning at Nixie_Display.v(15): created implicit net for "Date_BCD"
+Warning (10227): Verilog HDL Port Declaration warning at count_8.v(10): data type declaration for "Q" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at count_8.v(9): see declaration for object "Q"
+Warning (10227): Verilog HDL Port Declaration warning at Decoder_3_8.v(10): data type declaration for "F" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at Decoder_3_8.v(8): see declaration for object "F"
+Warning (10227): Verilog HDL Port Declaration warning at Selector_8_1.v(6): data type declaration for "SEL" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at Selector_8_1.v(4): see declaration for object "SEL"
+Warning (10227): Verilog HDL Port Declaration warning at Selector_8_1.v(7): data type declaration for "Y" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at Selector_8_1.v(5): see declaration for object "Y"
+Warning (10227): Verilog HDL Port Declaration warning at BCD_7_Seg.v(9): data type declaration for "BCD" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at BCD_7_Seg.v(7): see declaration for object "BCD"
+Warning (10227): Verilog HDL Port Declaration warning at BCD_7_Seg.v(10): data type declaration for "SEG" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at BCD_7_Seg.v(8): see declaration for object "SEG"
+Info (12127): Elaborating entity "Nixie_Display" for the top level hierarchy
+Info (12128): Elaborating entity "Divider" for hierarchy "Divider:U1"
+Warning (10230): Verilog HDL assignment warning at Divider.v(25): truncated value with size 32 to match size of target (17)
+Info (12128): Elaborating entity "count_8" for hierarchy "count_8:U2"
+Warning (10230): Verilog HDL assignment warning at count_8.v(20): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "Decoder_3_8" for hierarchy "Decoder_3_8:U3"
+Warning (10240): Verilog HDL Always Construct warning at Decoder_3_8.v(12): inferring latch(es) for variable "F", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "F[0]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[1]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[2]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[3]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[4]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[5]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[6]" at Decoder_3_8.v(16)
+Info (10041): Inferred latch for "F[7]" at Decoder_3_8.v(16)
+Info (12128): Elaborating entity "Selector_8_1" for hierarchy "Selector_8_1:U4"
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(12): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(13): variable "b" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(14): variable "c" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(15): variable "d" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(16): variable "e" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(17): variable "f" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(18): variable "g" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(19): variable "h" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Selector_8_1.v(20): variable "a" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (12128): Elaborating entity "BCD_7_Seg" for hierarchy "BCD_7_Seg:U5"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[2]" is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[1]" is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[2]" is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[1]" is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[2]" is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[1]" is missing source, defaulting to GND
+    Warning (12110): Net "scan_cnt[0]" is missing source, defaulting to GND
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[4]" is permanently disabled
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[5]" is permanently disabled
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[6]" is permanently disabled
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[7]" is permanently disabled
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[1]" is permanently disabled
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[2]" is permanently disabled
+Warning (14025): LATCH primitive "Decoder_3_8:U3|F[3]" is permanently disabled
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED_Bit[0]" is stuck at GND
+    Warning (13410): Pin "LED_Bit[1]" is stuck at VCC
+    Warning (13410): Pin "LED_Bit[2]" is stuck at VCC
+    Warning (13410): Pin "LED_Bit[3]" is stuck at VCC
+    Warning (13410): Pin "LED_Bit[4]" is stuck at VCC
+    Warning (13410): Pin "LED_Bit[5]" is stuck at VCC
+    Warning (13410): Pin "LED_Bit[6]" is stuck at VCC
+    Warning (13410): Pin "LED_Bit[7]" is stuck at VCC
+    Warning (13410): Pin "LED_SEG[0]" is stuck at VCC
+    Warning (13410): Pin "LED_SEG[1]" is stuck at GND
+    Warning (13410): Pin "LED_SEG[2]" is stuck at GND
+    Warning (13410): Pin "LED_SEG[3]" is stuck at VCC
+    Warning (13410): Pin "LED_SEG[4]" is stuck at VCC
+    Warning (13410): Pin "LED_SEG[5]" is stuck at VCC
+    Warning (13410): Pin "LED_SEG[6]" is stuck at VCC
+    Warning (13410): Pin "LED_SEG[7]" is stuck at VCC
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "cp"
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4601 megabytes
+    Info: Processing ended: Sat Nov 19 11:50:25 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

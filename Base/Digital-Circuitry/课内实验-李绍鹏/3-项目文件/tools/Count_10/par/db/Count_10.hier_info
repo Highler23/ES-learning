@@ -1,0 +1,14 @@
+|Count_10
+fclk => Nout[0]~reg0.CLK
+fclk => Nout[1]~reg0.CLK
+fclk => Nout[2]~reg0.CLK
+fclk => Nout[3]~reg0.CLK
+reset => ~NO_FANOUT~
+control => ~NO_FANOUT~
+Nout[0] <= Nout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Nout[1] <= Nout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Nout[2] <= Nout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Nout[3] <= Nout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cy <= <GND>
+
+

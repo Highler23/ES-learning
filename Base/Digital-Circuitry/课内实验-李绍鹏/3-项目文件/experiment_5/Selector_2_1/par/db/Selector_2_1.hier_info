@@ -1,0 +1,8 @@
+|Selector_2_1
+a => sela.IN0
+b => selb.IN0
+sel => selb.IN1
+sel => sela.IN1
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

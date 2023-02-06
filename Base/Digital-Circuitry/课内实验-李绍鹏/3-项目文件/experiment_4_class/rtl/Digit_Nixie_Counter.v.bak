@@ -1,0 +1,75 @@
+// 设计一个十进制数计数器并在数码管上轮流循环显示
+// @file		Digit_Nixie_Counter
+// @author	212241803537 zhaoqicheng
+
+module Digit_Nixie_Counter(clk,fout);
+
+// 分频器
+input clk;
+output fout;
+wire clk;
+reg fout;
+reg [25:0] Q;
+reg Pout;
+// 计数器
+input Rd;
+output Cy;
+output [3:0] Q;
+wire Rd;
+reg Cy;
+reg [3:0] Q;
+
+/**
+ * @brief		div_1HZ  分频器
+ * @parameter	clk   input    时钟信号
+ * @parameter	fout  output   分频信号
+ */
+always@ (posedge clk)
+	begin
+		if (Q == 24999999)
+			begin
+				Q = 0;
+				fout = !fout;
+			end
+		else
+			begin
+				Q = Q + 1;
+				fout = fout;
+			end
+	end
+
+/**
+ * @brief		Add_Counter
+ * @input	fout  新的时钟信号
+ * @input	Rd    置位
+ * @output	Q[3:0]计数器
+ * @output	Cy    进位
+ */
+always@ (posedge fout)
+	begin
+		if (!Rd)
+			begin
+				Q = 0;
+				Cy = 0;
+			end
+		else if (Q == 9)
+			begin
+				Q = 0;
+				Cy = 1;
+			end
+		else
+			begin
+				Q = Q + 1;
+				Cy = 0;
+			end
+			
+	end
+
+/**
+ * @brief	Nixie
+ * @input	Q[3:0]
+ * @output	
+ */
+
+	
+	

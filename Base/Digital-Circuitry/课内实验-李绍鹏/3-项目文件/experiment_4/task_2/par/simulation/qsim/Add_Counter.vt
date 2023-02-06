@@ -1,0 +1,596 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/06/2022 18:26:01"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Add_Counter
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Add_Counter_vlg_sample_tst(
+	CLK,
+	EN,
+	NCR,
+	sampler_tx
+);
+input  CLK;
+input  EN;
+input  NCR;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLK or EN or NCR)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Add_Counter_vlg_check_tst (
+	CY,
+	Q,
+	sampler_rx
+);
+input [1:0] CY;
+input [3:0] Q;
+input sampler_rx;
+
+reg [1:0] CY_expected;
+reg [3:0] Q_expected;
+
+reg [1:0] CY_prev;
+reg [3:0] Q_prev;
+
+reg [1:0] CY_expected_prev;
+reg [3:0] Q_expected_prev;
+
+reg [1:0] last_CY_exp;
+reg [3:0] last_Q_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	CY_prev = CY;
+	Q_prev = Q;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	CY_expected_prev = CY_expected;
+	Q_expected_prev = Q_expected;
+end
+
+
+// expected CY[ 1 ]
+initial
+begin
+	CY_expected[1] = 1'bX;
+end 
+// expected CY[ 0 ]
+initial
+begin
+	CY_expected[0] = 1'bX;
+end 
+// expected Q[ 3 ]
+initial
+begin
+	Q_expected[3] = 1'bX;
+end 
+// expected Q[ 2 ]
+initial
+begin
+	Q_expected[2] = 1'bX;
+end 
+// expected Q[ 1 ]
+initial
+begin
+	Q_expected[1] = 1'bX;
+end 
+// expected Q[ 0 ]
+initial
+begin
+	Q_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(CY_expected or CY or Q_expected or Q)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected CY = %b | expected Q = %b | ",CY_expected_prev,Q_expected_prev);
+	$display("| real CY = %b | real Q = %b | ",CY_prev,Q_prev);
+`endif
+	if (
+		( CY_expected_prev[0] !== 1'bx ) && ( CY_prev[0] !== CY_expected_prev[0] )
+		&& ((CY_expected_prev[0] !== last_CY_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CY[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CY_expected_prev);
+		$display ("     Real value = %b", CY_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CY_exp[0] = CY_expected_prev[0];
+	end
+	if (
+		( CY_expected_prev[1] !== 1'bx ) && ( CY_prev[1] !== CY_expected_prev[1] )
+		&& ((CY_expected_prev[1] !== last_CY_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port CY[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", CY_expected_prev);
+		$display ("     Real value = %b", CY_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_CY_exp[1] = CY_expected_prev[1];
+	end
+	if (
+		( Q_expected_prev[0] !== 1'bx ) && ( Q_prev[0] !== Q_expected_prev[0] )
+		&& ((Q_expected_prev[0] !== last_Q_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Q[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Q_expected_prev);
+		$display ("     Real value = %b", Q_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Q_exp[0] = Q_expected_prev[0];
+	end
+	if (
+		( Q_expected_prev[1] !== 1'bx ) && ( Q_prev[1] !== Q_expected_prev[1] )
+		&& ((Q_expected_prev[1] !== last_Q_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Q[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Q_expected_prev);
+		$display ("     Real value = %b", Q_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Q_exp[1] = Q_expected_prev[1];
+	end
+	if (
+		( Q_expected_prev[2] !== 1'bx ) && ( Q_prev[2] !== Q_expected_prev[2] )
+		&& ((Q_expected_prev[2] !== last_Q_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Q[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Q_expected_prev);
+		$display ("     Real value = %b", Q_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Q_exp[2] = Q_expected_prev[2];
+	end
+	if (
+		( Q_expected_prev[3] !== 1'bx ) && ( Q_prev[3] !== Q_expected_prev[3] )
+		&& ((Q_expected_prev[3] !== last_Q_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Q[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Q_expected_prev);
+		$display ("     Real value = %b", Q_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Q_exp[3] = Q_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Add_Counter_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg EN;
+reg NCR;
+// wires                                               
+wire [1:0] CY;
+wire [3:0] Q;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Add_Counter i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.CY(CY),
+	.EN(EN),
+	.NCR(NCR),
+	.Q(Q)
+);
+
+// CLK
+initial
+begin
+	CLK = 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #35000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #45000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #40000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #20000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #25000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #25000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #25000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #20000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #20000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #20000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #20000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #15000 1'b0;
+end 
+
+// EN
+initial
+begin
+	EN = 1'b1;
+	EN = #5000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #15000 1'b0;
+	EN = #5000 1'b1;
+	EN = #20000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #35000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #10000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #20000 1'b1;
+	EN = #15000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #15000 1'b1;
+	EN = #5000 1'b0;
+	EN = #10000 1'b1;
+	EN = #20000 1'b0;
+	EN = #10000 1'b1;
+	EN = #15000 1'b0;
+	EN = #15000 1'b1;
+	EN = #15000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #15000 1'b1;
+	EN = #25000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #25000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #15000 1'b1;
+	EN = #5000 1'b0;
+	EN = #15000 1'b1;
+	EN = #15000 1'b0;
+	EN = #5000 1'b1;
+	EN = #30000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #15000 1'b1;
+	EN = #15000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #25000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #15000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #25000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #30000 1'b0;
+	EN = #5000 1'b1;
+	EN = #5000 1'b0;
+	EN = #10000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #10000 1'b0;
+	EN = #5000 1'b1;
+	EN = #15000 1'b0;
+	EN = #15000 1'b1;
+	EN = #5000 1'b0;
+	EN = #5000 1'b1;
+	EN = #15000 1'b0;
+	EN = #10000 1'b1;
+end 
+
+// NCR
+initial
+begin
+	NCR = 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #15000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #35000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #30000 1'b0;
+	NCR = #15000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #15000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #15000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #15000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #15000 1'b0;
+	NCR = #25000 1'b1;
+	NCR = #25000 1'b0;
+	NCR = #30000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #20000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #35000 1'b1;
+	NCR = #15000 1'b0;
+	NCR = #15000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #20000 1'b1;
+	NCR = #10000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #10000 1'b1;
+	NCR = #5000 1'b0;
+	NCR = #5000 1'b1;
+	NCR = #20000 1'b0;
+	NCR = #15000 1'b1;
+	NCR = #5000 1'b0;
+end 
+
+Add_Counter_vlg_sample_tst tb_sample (
+	.CLK(CLK),
+	.EN(EN),
+	.NCR(NCR),
+	.sampler_tx(sampler)
+);
+
+Add_Counter_vlg_check_tst tb_out(
+	.CY(CY),
+	.Q(Q),
+	.sampler_rx(sampler)
+);
+endmodule
+

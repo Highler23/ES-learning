@@ -1,0 +1,477 @@
+Simulator report for PWM
+Mon Dec 05 16:36:06 2022
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 184 nodes    ;
+; Simulation Coverage         ;      33.15 % ;
+; Total Number of Transitions ; 1253725      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                    ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                  ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                               ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                     ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                      ;               ;
+; Vector input source                                                                        ; H:/code/digital-electronic-technology/lab/1/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                       ; On            ;
+; Check outputs                                                                              ; Off                                                      ; Off           ;
+; Report simulation coverage                                                                 ; On                                                       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                       ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                       ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                       ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                      ; Off           ;
+; Detect glitches                                                                            ; Off                                                      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                      ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                               ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                      ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                     ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      33.15 % ;
+; Total nodes checked                                 ; 184          ;
+; Total output ports checked                          ; 184          ;
+; Total output ports with complete 1/0-value coverage ; 61           ;
+; Total output ports with no 1/0-value coverage       ; 123          ;
+; Total output ports with no 1-value coverage         ; 123          ;
+; Total output ports with no 0-value coverage         ; 123          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                      ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |PWM|clk                      ; |PWM|clk                      ; out              ;
+; |PWM|PWM_OUT                  ; |PWM|PWM_OUT                  ; pin_out          ;
+; |PWM|select[0]                ; |PWM|select[0]                ; out              ;
+; |PWM|clkHZ                    ; |PWM|clkHZ                    ; pin_out          ;
+; |PWM|COMPARE:U4|ALTB          ; |PWM|COMPARE:U4|ALTB          ; out              ;
+; |PWM|cnt256:U2|Q[3]           ; |PWM|cnt256:U2|Q[3]           ; regout           ;
+; |PWM|cnt256:U2|Q[2]           ; |PWM|cnt256:U2|Q[2]           ; regout           ;
+; |PWM|cnt256:U2|Q[1]           ; |PWM|cnt256:U2|Q[1]           ; regout           ;
+; |PWM|cnt256:U2|Q[0]           ; |PWM|cnt256:U2|Q[0]           ; regout           ;
+; |PWM|cnt256:U2|Q~0            ; |PWM|cnt256:U2|Q~0            ; out              ;
+; |PWM|cnt256:U2|Q~1            ; |PWM|cnt256:U2|Q~1            ; out              ;
+; |PWM|cnt256:U2|Q~2            ; |PWM|cnt256:U2|Q~2            ; out              ;
+; |PWM|cnt256:U2|Q~3            ; |PWM|cnt256:U2|Q~3            ; out              ;
+; |PWM|cnt256:U2|Q~4            ; |PWM|cnt256:U2|Q~4            ; out              ;
+; |PWM|cnt256:U2|Q~5            ; |PWM|cnt256:U2|Q~5            ; out              ;
+; |PWM|cnt256:U2|Q~6            ; |PWM|cnt256:U2|Q~6            ; out              ;
+; |PWM|cnt256:U2|Q~7            ; |PWM|cnt256:U2|Q~7            ; out              ;
+; |PWM|cnt256:U2|Q[4]           ; |PWM|cnt256:U2|Q[4]           ; regout           ;
+; |PWM|cnt256:U2|Q[5]           ; |PWM|cnt256:U2|Q[5]           ; regout           ;
+; |PWM|cnt256:U2|Q[6]           ; |PWM|cnt256:U2|Q[6]           ; regout           ;
+; |PWM|cnt256:U2|Q[7]           ; |PWM|cnt256:U2|Q[7]           ; regout           ;
+; |PWM|divchange:U1|scan_cnt~30 ; |PWM|divchange:U1|scan_cnt~30 ; out              ;
+; |PWM|divchange:U1|scan_cnt~31 ; |PWM|divchange:U1|scan_cnt~31 ; out              ;
+; |PWM|divchange:U1|scan_cnt[0] ; |PWM|divchange:U1|scan_cnt[0] ; regout           ;
+; |PWM|divchange:U1|f0          ; |PWM|divchange:U1|f0          ; regout           ;
+; |PWM|COMPARE:U4|LessThan0~0   ; |PWM|COMPARE:U4|LessThan0~0   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~1   ; |PWM|COMPARE:U4|LessThan0~1   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~2   ; |PWM|COMPARE:U4|LessThan0~2   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~3   ; |PWM|COMPARE:U4|LessThan0~3   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~4   ; |PWM|COMPARE:U4|LessThan0~4   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~5   ; |PWM|COMPARE:U4|LessThan0~5   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~6   ; |PWM|COMPARE:U4|LessThan0~6   ; out0             ;
+; |PWM|COMPARE:U4|LessThan0~7   ; |PWM|COMPARE:U4|LessThan0~7   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~0   ; |PWM|COMPARE:U4|LessThan1~0   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~1   ; |PWM|COMPARE:U4|LessThan1~1   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~2   ; |PWM|COMPARE:U4|LessThan1~2   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~3   ; |PWM|COMPARE:U4|LessThan1~3   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~4   ; |PWM|COMPARE:U4|LessThan1~4   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~5   ; |PWM|COMPARE:U4|LessThan1~5   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~6   ; |PWM|COMPARE:U4|LessThan1~6   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~7   ; |PWM|COMPARE:U4|LessThan1~7   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~8   ; |PWM|COMPARE:U4|LessThan1~8   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~9   ; |PWM|COMPARE:U4|LessThan1~9   ; out0             ;
+; |PWM|COMPARE:U4|LessThan1~10  ; |PWM|COMPARE:U4|LessThan1~10  ; out0             ;
+; |PWM|cnt256:U2|Add0~0         ; |PWM|cnt256:U2|Add0~0         ; out0             ;
+; |PWM|cnt256:U2|Add0~1         ; |PWM|cnt256:U2|Add0~1         ; out0             ;
+; |PWM|cnt256:U2|Add0~2         ; |PWM|cnt256:U2|Add0~2         ; out0             ;
+; |PWM|cnt256:U2|Add0~3         ; |PWM|cnt256:U2|Add0~3         ; out0             ;
+; |PWM|cnt256:U2|Add0~4         ; |PWM|cnt256:U2|Add0~4         ; out0             ;
+; |PWM|cnt256:U2|Add0~5         ; |PWM|cnt256:U2|Add0~5         ; out0             ;
+; |PWM|cnt256:U2|Add0~6         ; |PWM|cnt256:U2|Add0~6         ; out0             ;
+; |PWM|cnt256:U2|Add0~7         ; |PWM|cnt256:U2|Add0~7         ; out0             ;
+; |PWM|cnt256:U2|Add0~8         ; |PWM|cnt256:U2|Add0~8         ; out0             ;
+; |PWM|cnt256:U2|Add0~9         ; |PWM|cnt256:U2|Add0~9         ; out0             ;
+; |PWM|cnt256:U2|Add0~10        ; |PWM|cnt256:U2|Add0~10        ; out0             ;
+; |PWM|cnt256:U2|Add0~11        ; |PWM|cnt256:U2|Add0~11        ; out0             ;
+; |PWM|cnt256:U2|Add0~12        ; |PWM|cnt256:U2|Add0~12        ; out0             ;
+; |PWM|divchange:U1|Add0~0      ; |PWM|divchange:U1|Add0~0      ; out0             ;
+; |PWM|cnt256:U2|Equal0~0       ; |PWM|cnt256:U2|Equal0~0       ; out0             ;
+; |PWM|divchange:U1|Equal0~0    ; |PWM|divchange:U1|Equal0~0    ; out0             ;
+; |PWM|divchange:U1|Equal0~2    ; |PWM|divchange:U1|Equal0~2    ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |PWM|select[1]                 ; |PWM|select[1]                 ; out              ;
+; |PWM|divchange:U1|scan_cnt[6]  ; |PWM|divchange:U1|scan_cnt[6]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[5]  ; |PWM|divchange:U1|scan_cnt[5]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[4]  ; |PWM|divchange:U1|scan_cnt[4]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[3]  ; |PWM|divchange:U1|scan_cnt[3]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[2]  ; |PWM|divchange:U1|scan_cnt[2]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt~0   ; |PWM|divchange:U1|scan_cnt~0   ; out              ;
+; |PWM|divchange:U1|scan_cnt~1   ; |PWM|divchange:U1|scan_cnt~1   ; out              ;
+; |PWM|divchange:U1|scan_cnt~2   ; |PWM|divchange:U1|scan_cnt~2   ; out              ;
+; |PWM|divchange:U1|scan_cnt~3   ; |PWM|divchange:U1|scan_cnt~3   ; out              ;
+; |PWM|divchange:U1|scan_cnt~4   ; |PWM|divchange:U1|scan_cnt~4   ; out              ;
+; |PWM|divchange:U1|scan_cnt~5   ; |PWM|divchange:U1|scan_cnt~5   ; out              ;
+; |PWM|divchange:U1|scan_cnt~6   ; |PWM|divchange:U1|scan_cnt~6   ; out              ;
+; |PWM|divchange:U1|scan_cnt~7   ; |PWM|divchange:U1|scan_cnt~7   ; out              ;
+; |PWM|divchange:U1|scan_cnt~8   ; |PWM|divchange:U1|scan_cnt~8   ; out              ;
+; |PWM|divchange:U1|scan_cnt~9   ; |PWM|divchange:U1|scan_cnt~9   ; out              ;
+; |PWM|divchange:U1|scan_cnt~10  ; |PWM|divchange:U1|scan_cnt~10  ; out              ;
+; |PWM|divchange:U1|scan_cnt~11  ; |PWM|divchange:U1|scan_cnt~11  ; out              ;
+; |PWM|divchange:U1|scan_cnt~12  ; |PWM|divchange:U1|scan_cnt~12  ; out              ;
+; |PWM|divchange:U1|scan_cnt~13  ; |PWM|divchange:U1|scan_cnt~13  ; out              ;
+; |PWM|divchange:U1|scan_cnt~14  ; |PWM|divchange:U1|scan_cnt~14  ; out              ;
+; |PWM|divchange:U1|scan_cnt~15  ; |PWM|divchange:U1|scan_cnt~15  ; out              ;
+; |PWM|divchange:U1|scan_cnt~16  ; |PWM|divchange:U1|scan_cnt~16  ; out              ;
+; |PWM|divchange:U1|scan_cnt~17  ; |PWM|divchange:U1|scan_cnt~17  ; out              ;
+; |PWM|divchange:U1|scan_cnt~18  ; |PWM|divchange:U1|scan_cnt~18  ; out              ;
+; |PWM|divchange:U1|scan_cnt~19  ; |PWM|divchange:U1|scan_cnt~19  ; out              ;
+; |PWM|divchange:U1|scan_cnt~20  ; |PWM|divchange:U1|scan_cnt~20  ; out              ;
+; |PWM|divchange:U1|scan_cnt~21  ; |PWM|divchange:U1|scan_cnt~21  ; out              ;
+; |PWM|divchange:U1|scan_cnt~22  ; |PWM|divchange:U1|scan_cnt~22  ; out              ;
+; |PWM|divchange:U1|scan_cnt~23  ; |PWM|divchange:U1|scan_cnt~23  ; out              ;
+; |PWM|divchange:U1|scan_cnt~24  ; |PWM|divchange:U1|scan_cnt~24  ; out              ;
+; |PWM|divchange:U1|scan_cnt~25  ; |PWM|divchange:U1|scan_cnt~25  ; out              ;
+; |PWM|divchange:U1|scan_cnt~26  ; |PWM|divchange:U1|scan_cnt~26  ; out              ;
+; |PWM|divchange:U1|scan_cnt~27  ; |PWM|divchange:U1|scan_cnt~27  ; out              ;
+; |PWM|divchange:U1|scan_cnt~28  ; |PWM|divchange:U1|scan_cnt~28  ; out              ;
+; |PWM|divchange:U1|scan_cnt~29  ; |PWM|divchange:U1|scan_cnt~29  ; out              ;
+; |PWM|divchange:U1|scan_cnt[1]  ; |PWM|divchange:U1|scan_cnt[1]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[7]  ; |PWM|divchange:U1|scan_cnt[7]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[8]  ; |PWM|divchange:U1|scan_cnt[8]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[9]  ; |PWM|divchange:U1|scan_cnt[9]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[10] ; |PWM|divchange:U1|scan_cnt[10] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[11] ; |PWM|divchange:U1|scan_cnt[11] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[12] ; |PWM|divchange:U1|scan_cnt[12] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[13] ; |PWM|divchange:U1|scan_cnt[13] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[14] ; |PWM|divchange:U1|scan_cnt[14] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[15] ; |PWM|divchange:U1|scan_cnt[15] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[16] ; |PWM|divchange:U1|scan_cnt[16] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[17] ; |PWM|divchange:U1|scan_cnt[17] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[18] ; |PWM|divchange:U1|scan_cnt[18] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[19] ; |PWM|divchange:U1|scan_cnt[19] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[20] ; |PWM|divchange:U1|scan_cnt[20] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[21] ; |PWM|divchange:U1|scan_cnt[21] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[22] ; |PWM|divchange:U1|scan_cnt[22] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[23] ; |PWM|divchange:U1|scan_cnt[23] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[24] ; |PWM|divchange:U1|scan_cnt[24] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[25] ; |PWM|divchange:U1|scan_cnt[25] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[26] ; |PWM|divchange:U1|scan_cnt[26] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[27] ; |PWM|divchange:U1|scan_cnt[27] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[28] ; |PWM|divchange:U1|scan_cnt[28] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[29] ; |PWM|divchange:U1|scan_cnt[29] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[30] ; |PWM|divchange:U1|scan_cnt[30] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[31] ; |PWM|divchange:U1|scan_cnt[31] ; regout           ;
+; |PWM|divchange:U1|Add0~1       ; |PWM|divchange:U1|Add0~1       ; out0             ;
+; |PWM|divchange:U1|Add0~2       ; |PWM|divchange:U1|Add0~2       ; out0             ;
+; |PWM|divchange:U1|Add0~3       ; |PWM|divchange:U1|Add0~3       ; out0             ;
+; |PWM|divchange:U1|Add0~4       ; |PWM|divchange:U1|Add0~4       ; out0             ;
+; |PWM|divchange:U1|Add0~5       ; |PWM|divchange:U1|Add0~5       ; out0             ;
+; |PWM|divchange:U1|Add0~6       ; |PWM|divchange:U1|Add0~6       ; out0             ;
+; |PWM|divchange:U1|Add0~7       ; |PWM|divchange:U1|Add0~7       ; out0             ;
+; |PWM|divchange:U1|Add0~8       ; |PWM|divchange:U1|Add0~8       ; out0             ;
+; |PWM|divchange:U1|Add0~9       ; |PWM|divchange:U1|Add0~9       ; out0             ;
+; |PWM|divchange:U1|Add0~10      ; |PWM|divchange:U1|Add0~10      ; out0             ;
+; |PWM|divchange:U1|Add0~11      ; |PWM|divchange:U1|Add0~11      ; out0             ;
+; |PWM|divchange:U1|Add0~12      ; |PWM|divchange:U1|Add0~12      ; out0             ;
+; |PWM|divchange:U1|Add0~13      ; |PWM|divchange:U1|Add0~13      ; out0             ;
+; |PWM|divchange:U1|Add0~14      ; |PWM|divchange:U1|Add0~14      ; out0             ;
+; |PWM|divchange:U1|Add0~15      ; |PWM|divchange:U1|Add0~15      ; out0             ;
+; |PWM|divchange:U1|Add0~16      ; |PWM|divchange:U1|Add0~16      ; out0             ;
+; |PWM|divchange:U1|Add0~17      ; |PWM|divchange:U1|Add0~17      ; out0             ;
+; |PWM|divchange:U1|Add0~18      ; |PWM|divchange:U1|Add0~18      ; out0             ;
+; |PWM|divchange:U1|Add0~19      ; |PWM|divchange:U1|Add0~19      ; out0             ;
+; |PWM|divchange:U1|Add0~20      ; |PWM|divchange:U1|Add0~20      ; out0             ;
+; |PWM|divchange:U1|Add0~21      ; |PWM|divchange:U1|Add0~21      ; out0             ;
+; |PWM|divchange:U1|Add0~22      ; |PWM|divchange:U1|Add0~22      ; out0             ;
+; |PWM|divchange:U1|Add0~23      ; |PWM|divchange:U1|Add0~23      ; out0             ;
+; |PWM|divchange:U1|Add0~24      ; |PWM|divchange:U1|Add0~24      ; out0             ;
+; |PWM|divchange:U1|Add0~25      ; |PWM|divchange:U1|Add0~25      ; out0             ;
+; |PWM|divchange:U1|Add0~26      ; |PWM|divchange:U1|Add0~26      ; out0             ;
+; |PWM|divchange:U1|Add0~27      ; |PWM|divchange:U1|Add0~27      ; out0             ;
+; |PWM|divchange:U1|Add0~28      ; |PWM|divchange:U1|Add0~28      ; out0             ;
+; |PWM|divchange:U1|Add0~29      ; |PWM|divchange:U1|Add0~29      ; out0             ;
+; |PWM|divchange:U1|Add0~30      ; |PWM|divchange:U1|Add0~30      ; out0             ;
+; |PWM|divchange:U1|Add0~31      ; |PWM|divchange:U1|Add0~31      ; out0             ;
+; |PWM|divchange:U1|Add0~32      ; |PWM|divchange:U1|Add0~32      ; out0             ;
+; |PWM|divchange:U1|Add0~33      ; |PWM|divchange:U1|Add0~33      ; out0             ;
+; |PWM|divchange:U1|Add0~34      ; |PWM|divchange:U1|Add0~34      ; out0             ;
+; |PWM|divchange:U1|Add0~35      ; |PWM|divchange:U1|Add0~35      ; out0             ;
+; |PWM|divchange:U1|Add0~36      ; |PWM|divchange:U1|Add0~36      ; out0             ;
+; |PWM|divchange:U1|Add0~37      ; |PWM|divchange:U1|Add0~37      ; out0             ;
+; |PWM|divchange:U1|Add0~38      ; |PWM|divchange:U1|Add0~38      ; out0             ;
+; |PWM|divchange:U1|Add0~39      ; |PWM|divchange:U1|Add0~39      ; out0             ;
+; |PWM|divchange:U1|Add0~40      ; |PWM|divchange:U1|Add0~40      ; out0             ;
+; |PWM|divchange:U1|Add0~41      ; |PWM|divchange:U1|Add0~41      ; out0             ;
+; |PWM|divchange:U1|Add0~42      ; |PWM|divchange:U1|Add0~42      ; out0             ;
+; |PWM|divchange:U1|Add0~43      ; |PWM|divchange:U1|Add0~43      ; out0             ;
+; |PWM|divchange:U1|Add0~44      ; |PWM|divchange:U1|Add0~44      ; out0             ;
+; |PWM|divchange:U1|Add0~45      ; |PWM|divchange:U1|Add0~45      ; out0             ;
+; |PWM|divchange:U1|Add0~46      ; |PWM|divchange:U1|Add0~46      ; out0             ;
+; |PWM|divchange:U1|Add0~47      ; |PWM|divchange:U1|Add0~47      ; out0             ;
+; |PWM|divchange:U1|Add0~48      ; |PWM|divchange:U1|Add0~48      ; out0             ;
+; |PWM|divchange:U1|Add0~49      ; |PWM|divchange:U1|Add0~49      ; out0             ;
+; |PWM|divchange:U1|Add0~50      ; |PWM|divchange:U1|Add0~50      ; out0             ;
+; |PWM|divchange:U1|Add0~51      ; |PWM|divchange:U1|Add0~51      ; out0             ;
+; |PWM|divchange:U1|Add0~52      ; |PWM|divchange:U1|Add0~52      ; out0             ;
+; |PWM|divchange:U1|Add0~53      ; |PWM|divchange:U1|Add0~53      ; out0             ;
+; |PWM|divchange:U1|Add0~54      ; |PWM|divchange:U1|Add0~54      ; out0             ;
+; |PWM|divchange:U1|Add0~55      ; |PWM|divchange:U1|Add0~55      ; out0             ;
+; |PWM|divchange:U1|Add0~56      ; |PWM|divchange:U1|Add0~56      ; out0             ;
+; |PWM|divchange:U1|Add0~57      ; |PWM|divchange:U1|Add0~57      ; out0             ;
+; |PWM|divchange:U1|Add0~58      ; |PWM|divchange:U1|Add0~58      ; out0             ;
+; |PWM|divchange:U1|Add0~59      ; |PWM|divchange:U1|Add0~59      ; out0             ;
+; |PWM|divchange:U1|Add0~60      ; |PWM|divchange:U1|Add0~60      ; out0             ;
+; |PWM|divchange:U1|Equal0~1     ; |PWM|divchange:U1|Equal0~1     ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |PWM|select[1]                 ; |PWM|select[1]                 ; out              ;
+; |PWM|divchange:U1|scan_cnt[6]  ; |PWM|divchange:U1|scan_cnt[6]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[5]  ; |PWM|divchange:U1|scan_cnt[5]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[4]  ; |PWM|divchange:U1|scan_cnt[4]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[3]  ; |PWM|divchange:U1|scan_cnt[3]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[2]  ; |PWM|divchange:U1|scan_cnt[2]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt~0   ; |PWM|divchange:U1|scan_cnt~0   ; out              ;
+; |PWM|divchange:U1|scan_cnt~1   ; |PWM|divchange:U1|scan_cnt~1   ; out              ;
+; |PWM|divchange:U1|scan_cnt~2   ; |PWM|divchange:U1|scan_cnt~2   ; out              ;
+; |PWM|divchange:U1|scan_cnt~3   ; |PWM|divchange:U1|scan_cnt~3   ; out              ;
+; |PWM|divchange:U1|scan_cnt~4   ; |PWM|divchange:U1|scan_cnt~4   ; out              ;
+; |PWM|divchange:U1|scan_cnt~5   ; |PWM|divchange:U1|scan_cnt~5   ; out              ;
+; |PWM|divchange:U1|scan_cnt~6   ; |PWM|divchange:U1|scan_cnt~6   ; out              ;
+; |PWM|divchange:U1|scan_cnt~7   ; |PWM|divchange:U1|scan_cnt~7   ; out              ;
+; |PWM|divchange:U1|scan_cnt~8   ; |PWM|divchange:U1|scan_cnt~8   ; out              ;
+; |PWM|divchange:U1|scan_cnt~9   ; |PWM|divchange:U1|scan_cnt~9   ; out              ;
+; |PWM|divchange:U1|scan_cnt~10  ; |PWM|divchange:U1|scan_cnt~10  ; out              ;
+; |PWM|divchange:U1|scan_cnt~11  ; |PWM|divchange:U1|scan_cnt~11  ; out              ;
+; |PWM|divchange:U1|scan_cnt~12  ; |PWM|divchange:U1|scan_cnt~12  ; out              ;
+; |PWM|divchange:U1|scan_cnt~13  ; |PWM|divchange:U1|scan_cnt~13  ; out              ;
+; |PWM|divchange:U1|scan_cnt~14  ; |PWM|divchange:U1|scan_cnt~14  ; out              ;
+; |PWM|divchange:U1|scan_cnt~15  ; |PWM|divchange:U1|scan_cnt~15  ; out              ;
+; |PWM|divchange:U1|scan_cnt~16  ; |PWM|divchange:U1|scan_cnt~16  ; out              ;
+; |PWM|divchange:U1|scan_cnt~17  ; |PWM|divchange:U1|scan_cnt~17  ; out              ;
+; |PWM|divchange:U1|scan_cnt~18  ; |PWM|divchange:U1|scan_cnt~18  ; out              ;
+; |PWM|divchange:U1|scan_cnt~19  ; |PWM|divchange:U1|scan_cnt~19  ; out              ;
+; |PWM|divchange:U1|scan_cnt~20  ; |PWM|divchange:U1|scan_cnt~20  ; out              ;
+; |PWM|divchange:U1|scan_cnt~21  ; |PWM|divchange:U1|scan_cnt~21  ; out              ;
+; |PWM|divchange:U1|scan_cnt~22  ; |PWM|divchange:U1|scan_cnt~22  ; out              ;
+; |PWM|divchange:U1|scan_cnt~23  ; |PWM|divchange:U1|scan_cnt~23  ; out              ;
+; |PWM|divchange:U1|scan_cnt~24  ; |PWM|divchange:U1|scan_cnt~24  ; out              ;
+; |PWM|divchange:U1|scan_cnt~25  ; |PWM|divchange:U1|scan_cnt~25  ; out              ;
+; |PWM|divchange:U1|scan_cnt~26  ; |PWM|divchange:U1|scan_cnt~26  ; out              ;
+; |PWM|divchange:U1|scan_cnt~27  ; |PWM|divchange:U1|scan_cnt~27  ; out              ;
+; |PWM|divchange:U1|scan_cnt~28  ; |PWM|divchange:U1|scan_cnt~28  ; out              ;
+; |PWM|divchange:U1|scan_cnt~29  ; |PWM|divchange:U1|scan_cnt~29  ; out              ;
+; |PWM|divchange:U1|scan_cnt[1]  ; |PWM|divchange:U1|scan_cnt[1]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[7]  ; |PWM|divchange:U1|scan_cnt[7]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[8]  ; |PWM|divchange:U1|scan_cnt[8]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[9]  ; |PWM|divchange:U1|scan_cnt[9]  ; regout           ;
+; |PWM|divchange:U1|scan_cnt[10] ; |PWM|divchange:U1|scan_cnt[10] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[11] ; |PWM|divchange:U1|scan_cnt[11] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[12] ; |PWM|divchange:U1|scan_cnt[12] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[13] ; |PWM|divchange:U1|scan_cnt[13] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[14] ; |PWM|divchange:U1|scan_cnt[14] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[15] ; |PWM|divchange:U1|scan_cnt[15] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[16] ; |PWM|divchange:U1|scan_cnt[16] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[17] ; |PWM|divchange:U1|scan_cnt[17] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[18] ; |PWM|divchange:U1|scan_cnt[18] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[19] ; |PWM|divchange:U1|scan_cnt[19] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[20] ; |PWM|divchange:U1|scan_cnt[20] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[21] ; |PWM|divchange:U1|scan_cnt[21] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[22] ; |PWM|divchange:U1|scan_cnt[22] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[23] ; |PWM|divchange:U1|scan_cnt[23] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[24] ; |PWM|divchange:U1|scan_cnt[24] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[25] ; |PWM|divchange:U1|scan_cnt[25] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[26] ; |PWM|divchange:U1|scan_cnt[26] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[27] ; |PWM|divchange:U1|scan_cnt[27] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[28] ; |PWM|divchange:U1|scan_cnt[28] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[29] ; |PWM|divchange:U1|scan_cnt[29] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[30] ; |PWM|divchange:U1|scan_cnt[30] ; regout           ;
+; |PWM|divchange:U1|scan_cnt[31] ; |PWM|divchange:U1|scan_cnt[31] ; regout           ;
+; |PWM|divchange:U1|Add0~1       ; |PWM|divchange:U1|Add0~1       ; out0             ;
+; |PWM|divchange:U1|Add0~2       ; |PWM|divchange:U1|Add0~2       ; out0             ;
+; |PWM|divchange:U1|Add0~3       ; |PWM|divchange:U1|Add0~3       ; out0             ;
+; |PWM|divchange:U1|Add0~4       ; |PWM|divchange:U1|Add0~4       ; out0             ;
+; |PWM|divchange:U1|Add0~5       ; |PWM|divchange:U1|Add0~5       ; out0             ;
+; |PWM|divchange:U1|Add0~6       ; |PWM|divchange:U1|Add0~6       ; out0             ;
+; |PWM|divchange:U1|Add0~7       ; |PWM|divchange:U1|Add0~7       ; out0             ;
+; |PWM|divchange:U1|Add0~8       ; |PWM|divchange:U1|Add0~8       ; out0             ;
+; |PWM|divchange:U1|Add0~9       ; |PWM|divchange:U1|Add0~9       ; out0             ;
+; |PWM|divchange:U1|Add0~10      ; |PWM|divchange:U1|Add0~10      ; out0             ;
+; |PWM|divchange:U1|Add0~11      ; |PWM|divchange:U1|Add0~11      ; out0             ;
+; |PWM|divchange:U1|Add0~12      ; |PWM|divchange:U1|Add0~12      ; out0             ;
+; |PWM|divchange:U1|Add0~13      ; |PWM|divchange:U1|Add0~13      ; out0             ;
+; |PWM|divchange:U1|Add0~14      ; |PWM|divchange:U1|Add0~14      ; out0             ;
+; |PWM|divchange:U1|Add0~15      ; |PWM|divchange:U1|Add0~15      ; out0             ;
+; |PWM|divchange:U1|Add0~16      ; |PWM|divchange:U1|Add0~16      ; out0             ;
+; |PWM|divchange:U1|Add0~17      ; |PWM|divchange:U1|Add0~17      ; out0             ;
+; |PWM|divchange:U1|Add0~18      ; |PWM|divchange:U1|Add0~18      ; out0             ;
+; |PWM|divchange:U1|Add0~19      ; |PWM|divchange:U1|Add0~19      ; out0             ;
+; |PWM|divchange:U1|Add0~20      ; |PWM|divchange:U1|Add0~20      ; out0             ;
+; |PWM|divchange:U1|Add0~21      ; |PWM|divchange:U1|Add0~21      ; out0             ;
+; |PWM|divchange:U1|Add0~22      ; |PWM|divchange:U1|Add0~22      ; out0             ;
+; |PWM|divchange:U1|Add0~23      ; |PWM|divchange:U1|Add0~23      ; out0             ;
+; |PWM|divchange:U1|Add0~24      ; |PWM|divchange:U1|Add0~24      ; out0             ;
+; |PWM|divchange:U1|Add0~25      ; |PWM|divchange:U1|Add0~25      ; out0             ;
+; |PWM|divchange:U1|Add0~26      ; |PWM|divchange:U1|Add0~26      ; out0             ;
+; |PWM|divchange:U1|Add0~27      ; |PWM|divchange:U1|Add0~27      ; out0             ;
+; |PWM|divchange:U1|Add0~28      ; |PWM|divchange:U1|Add0~28      ; out0             ;
+; |PWM|divchange:U1|Add0~29      ; |PWM|divchange:U1|Add0~29      ; out0             ;
+; |PWM|divchange:U1|Add0~30      ; |PWM|divchange:U1|Add0~30      ; out0             ;
+; |PWM|divchange:U1|Add0~31      ; |PWM|divchange:U1|Add0~31      ; out0             ;
+; |PWM|divchange:U1|Add0~32      ; |PWM|divchange:U1|Add0~32      ; out0             ;
+; |PWM|divchange:U1|Add0~33      ; |PWM|divchange:U1|Add0~33      ; out0             ;
+; |PWM|divchange:U1|Add0~34      ; |PWM|divchange:U1|Add0~34      ; out0             ;
+; |PWM|divchange:U1|Add0~35      ; |PWM|divchange:U1|Add0~35      ; out0             ;
+; |PWM|divchange:U1|Add0~36      ; |PWM|divchange:U1|Add0~36      ; out0             ;
+; |PWM|divchange:U1|Add0~37      ; |PWM|divchange:U1|Add0~37      ; out0             ;
+; |PWM|divchange:U1|Add0~38      ; |PWM|divchange:U1|Add0~38      ; out0             ;
+; |PWM|divchange:U1|Add0~39      ; |PWM|divchange:U1|Add0~39      ; out0             ;
+; |PWM|divchange:U1|Add0~40      ; |PWM|divchange:U1|Add0~40      ; out0             ;
+; |PWM|divchange:U1|Add0~41      ; |PWM|divchange:U1|Add0~41      ; out0             ;
+; |PWM|divchange:U1|Add0~42      ; |PWM|divchange:U1|Add0~42      ; out0             ;
+; |PWM|divchange:U1|Add0~43      ; |PWM|divchange:U1|Add0~43      ; out0             ;
+; |PWM|divchange:U1|Add0~44      ; |PWM|divchange:U1|Add0~44      ; out0             ;
+; |PWM|divchange:U1|Add0~45      ; |PWM|divchange:U1|Add0~45      ; out0             ;
+; |PWM|divchange:U1|Add0~46      ; |PWM|divchange:U1|Add0~46      ; out0             ;
+; |PWM|divchange:U1|Add0~47      ; |PWM|divchange:U1|Add0~47      ; out0             ;
+; |PWM|divchange:U1|Add0~48      ; |PWM|divchange:U1|Add0~48      ; out0             ;
+; |PWM|divchange:U1|Add0~49      ; |PWM|divchange:U1|Add0~49      ; out0             ;
+; |PWM|divchange:U1|Add0~50      ; |PWM|divchange:U1|Add0~50      ; out0             ;
+; |PWM|divchange:U1|Add0~51      ; |PWM|divchange:U1|Add0~51      ; out0             ;
+; |PWM|divchange:U1|Add0~52      ; |PWM|divchange:U1|Add0~52      ; out0             ;
+; |PWM|divchange:U1|Add0~53      ; |PWM|divchange:U1|Add0~53      ; out0             ;
+; |PWM|divchange:U1|Add0~54      ; |PWM|divchange:U1|Add0~54      ; out0             ;
+; |PWM|divchange:U1|Add0~55      ; |PWM|divchange:U1|Add0~55      ; out0             ;
+; |PWM|divchange:U1|Add0~56      ; |PWM|divchange:U1|Add0~56      ; out0             ;
+; |PWM|divchange:U1|Add0~57      ; |PWM|divchange:U1|Add0~57      ; out0             ;
+; |PWM|divchange:U1|Add0~58      ; |PWM|divchange:U1|Add0~58      ; out0             ;
+; |PWM|divchange:U1|Add0~59      ; |PWM|divchange:U1|Add0~59      ; out0             ;
+; |PWM|divchange:U1|Add0~60      ; |PWM|divchange:U1|Add0~60      ; out0             ;
+; |PWM|divchange:U1|Equal0~1     ; |PWM|divchange:U1|Equal0~1     ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Mon Dec 05 16:35:58 2022
+Info: Command: quartus_sim --simulation_results_format=VWF PWM -c PWM
+Info (324025): Using vector source file "H:/code/digital-electronic-technology/lab/1/Waveform.vwf"
+Warning (328014): Can't find node "PWM_IN[7]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[6]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[5]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[4]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[3]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[2]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[1]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "PWM_IN[0]" for functional simulation. Ignored vector source file node.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      33.15 %
+Info (328052): Number of transitions in simulation is 1253725
+Info (324045): Vector file PWM.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4449 megabytes
+    Info: Processing ended: Mon Dec 05 16:36:06 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
+
+

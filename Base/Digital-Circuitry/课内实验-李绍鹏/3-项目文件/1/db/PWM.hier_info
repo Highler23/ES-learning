@@ -1,0 +1,134 @@
+|PWM
+clk => clk~0.IN1
+PWM_OUT <= COMPARE:U4.ALTB
+select[0] => select[0]~1.IN1
+select[1] => select[1]~0.IN1
+clkHZ <= clkHZ~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PWM|divchange:U1
+clk => f0~reg0.CLK
+clk => scan_cnt[0].CLK
+clk => scan_cnt[1].CLK
+clk => scan_cnt[2].CLK
+clk => scan_cnt[3].CLK
+clk => scan_cnt[4].CLK
+clk => scan_cnt[5].CLK
+clk => scan_cnt[6].CLK
+clk => scan_cnt[7].CLK
+clk => scan_cnt[8].CLK
+clk => scan_cnt[9].CLK
+clk => scan_cnt[10].CLK
+clk => scan_cnt[11].CLK
+clk => scan_cnt[12].CLK
+clk => scan_cnt[13].CLK
+clk => scan_cnt[14].CLK
+clk => scan_cnt[15].CLK
+clk => scan_cnt[16].CLK
+clk => scan_cnt[17].CLK
+clk => scan_cnt[18].CLK
+clk => scan_cnt[19].CLK
+clk => scan_cnt[20].CLK
+clk => scan_cnt[21].CLK
+clk => scan_cnt[22].CLK
+clk => scan_cnt[23].CLK
+clk => scan_cnt[24].CLK
+clk => scan_cnt[25].CLK
+clk => scan_cnt[26].CLK
+clk => scan_cnt[27].CLK
+clk => scan_cnt[28].CLK
+clk => scan_cnt[29].CLK
+clk => scan_cnt[30].CLK
+clk => scan_cnt[31].CLK
+f0 <= f0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+select[0] => Equal0.IN31
+select[1] => Equal0.IN30
+
+
+|PWM|cnt256:U2
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+clk => EN~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN <= EN~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PWM|Register:U3
+EN => Q[0]~reg0.CLK
+EN => Q[1]~reg0.CLK
+EN => Q[2]~reg0.CLK
+EN => Q[3]~reg0.CLK
+EN => Q[4]~reg0.CLK
+EN => Q[5]~reg0.CLK
+EN => Q[6]~reg0.CLK
+EN => Q[7]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+CLR => ~NO_FANOUT~
+
+
+|PWM|COMPARE:U4
+A[0] => LessThan0.IN16
+A[0] => LessThan1.IN16
+A[1] => LessThan0.IN15
+A[1] => LessThan1.IN15
+A[2] => LessThan0.IN14
+A[2] => LessThan1.IN14
+A[3] => LessThan0.IN13
+A[3] => LessThan1.IN13
+A[4] => LessThan0.IN12
+A[4] => LessThan1.IN12
+A[5] => LessThan0.IN11
+A[5] => LessThan1.IN11
+A[6] => LessThan0.IN10
+A[6] => LessThan1.IN10
+A[7] => LessThan0.IN9
+A[7] => LessThan1.IN9
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+B[4] => LessThan0.IN4
+B[4] => LessThan1.IN4
+B[5] => LessThan0.IN3
+B[5] => LessThan1.IN3
+B[6] => LessThan0.IN2
+B[6] => LessThan1.IN2
+B[7] => LessThan0.IN1
+B[7] => LessThan1.IN1
+AGTB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= ALTB~0.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

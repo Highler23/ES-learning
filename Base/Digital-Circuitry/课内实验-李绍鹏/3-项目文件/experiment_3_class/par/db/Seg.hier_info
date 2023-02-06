@@ -1,0 +1,23 @@
+|Seg
+D[0] => Decoder0.IN3
+D[1] => Decoder0.IN2
+D[2] => Decoder0.IN1
+D[3] => Decoder0.IN0
+Dout[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Dout[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Dout[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Dout[7] <= <VCC>
+Cout[0] <= <VCC>
+Cout[1] <= <GND>
+Cout[2] <= <VCC>
+Cout[3] <= <VCC>
+Cout[4] <= <VCC>
+Cout[5] <= <VCC>
+Cout[6] <= <VCC>
+Cout[7] <= <VCC>
+
+

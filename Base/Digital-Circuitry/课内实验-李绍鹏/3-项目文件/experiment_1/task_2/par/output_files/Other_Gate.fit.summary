@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Oct 16 10:34:00 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Other_Gate
+Top-level Entity Name : Other_Gate
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 3 / 8,256 ( < 1 % )
+    Total combinational functions : 3 / 8,256 ( < 1 % )
+    Dedicated logic registers : 0 / 8,256 ( 0 % )
+Total registers : 0
+Total pins : 6 / 138 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,14 @@
+module Scanning_Display(cp,LED_Bit,LED_SEG);
+
+input cp;
+output [3:0]LED_Bit;
+output [7:0]LED_SEG;
+wire clk_200Hz;
+wire [1:0]scan_cnt;
+wire [3:0]Date_BCD;
+div U1(.clk(cp),.f0(clk_200Hz));
+cnt2 U2(.clk(clk_200Hz),.Q(scan_cnt));
+Encode_2_4 U3(.A(scan_cnt),.F(LED_Bit));
+mux_4_1 U4(.SEL(scan_cnt),.A(4'd8),.B(4'd7),.C(4'd6),.D(4'd5),.Y(Date_BCD));
+BCD_7SEG U5(.BCD(Date_BCD),.SEG(LED_SEG));
+endmodule 

@@ -1,0 +1,8 @@
+module cnt8(clk,Q);
+input clk;
+output reg [2:0] Q;
+always@(posedge clk)
+begin
+	Q<=Q+1;
+end
+endmodule

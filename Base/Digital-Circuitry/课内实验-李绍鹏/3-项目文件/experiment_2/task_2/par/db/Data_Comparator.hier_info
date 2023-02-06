@@ -1,0 +1,14 @@
+|Data_Comparator
+A[0] => LessThan0.IN4
+A[0] => LessThan1.IN4
+A[1] => LessThan0.IN3
+A[1] => LessThan1.IN3
+B[0] => LessThan0.IN2
+B[0] => LessThan1.IN2
+B[1] => LessThan0.IN1
+B[1] => LessThan1.IN1
+AGTB <= AGTB~0.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB~0.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

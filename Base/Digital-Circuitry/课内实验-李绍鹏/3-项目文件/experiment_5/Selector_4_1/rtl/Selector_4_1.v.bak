@@ -1,0 +1,12 @@
+module Selector_4_1(A,B,C,D,SEL,Y);
+
+input  A,B,C,D;
+input [1:0]SEL;
+output Y;
+wire Y_int1,Y_int2;
+
+mux_2_1 U1(A,B,SEL[0],Y_int1);
+mux_2_1 U2(C,D,SEL[0],Y_int2);
+mux_2_1 U3(Y_int1,Y_int2,SEL[0],Y);
+
+endmodule 

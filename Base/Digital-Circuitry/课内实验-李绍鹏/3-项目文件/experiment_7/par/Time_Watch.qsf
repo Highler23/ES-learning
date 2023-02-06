@@ -1,0 +1,86 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+# Date created = 18:37:48  November 20, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Time_Watch_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C8Q208C8
+set_global_assignment -name TOP_LEVEL_ENTITY Time_Watch
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:37:48  NOVEMBER 20, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE ../rtl/Divider.v
+set_global_assignment -name VERILOG_FILE ../rtl/Time_Watch.v
+set_global_assignment -name VERILOG_FILE ../rtl/Time_Counter.v
+set_global_assignment -name VERILOG_FILE ../rtl/Tube.v
+set_global_assignment -name VERILOG_FILE ../rtl/Decoder_3_8.v
+set_global_assignment -name VERILOG_FILE ../rtl/Selector_5_1.v
+set_global_assignment -name VERILOG_FILE ../rtl/BCD_7_SEG.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../sim/Waveform.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../sim/Waveform_pro.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "H:/code/digital-electronic-technology/lab/experiment_7/sim/Waveform_pro.vwf"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_208 -to LED_Bit[7]
+set_location_assignment PIN_207 -to LED_Bit[6]
+set_location_assignment PIN_206 -to LED_Bit[5]
+set_location_assignment PIN_205 -to LED_Bit[4]
+set_location_assignment PIN_151 -to LED_Bit[3]
+set_location_assignment PIN_152 -to LED_Bit[2]
+set_location_assignment PIN_149 -to LED_Bit[1]
+set_location_assignment PIN_150 -to LED_Bit[0]
+set_location_assignment PIN_171 -to LED_SEG[7]
+set_location_assignment PIN_164 -to LED_SEG[6]
+set_location_assignment PIN_168 -to LED_SEG[5]
+set_location_assignment PIN_173 -to LED_SEG[4]
+set_location_assignment PIN_175 -to LED_SEG[3]
+set_location_assignment PIN_169 -to LED_SEG[2]
+set_location_assignment PIN_165 -to LED_SEG[1]
+set_location_assignment PIN_170 -to LED_SEG[0]
+set_location_assignment PIN_113 -to S5
+set_location_assignment PIN_114 -to S6
+set_location_assignment PIN_23 -to cp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

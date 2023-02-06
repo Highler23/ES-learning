@@ -1,0 +1,42 @@
+// @file      segment
+// @author    212241803537 zhaoqicheng
+// @date      20222-10-29
+module Code_Decoder(D,Dout,Cout);
+
+input D;  
+output Dout,Cout;   
+wire [3:0] D;
+reg [7:0] Dout;
+wire [7:0] Cout;
+
+/**
+ * @brief    位码
+ * @param    Cout
+ * @details  将一个八位二进制数赋值给Cout
+ */
+assign Cout = 8'b1000_0000;  // 被选择为0
+
+/**
+ * @brief    段码
+ * @param    D
+ * @param    Dout
+ * @details  将一个四位二进制数赋值给D;将一个八位二进制数赋值给Dout
+ */
+always@(D)
+begin
+    case(D)
+        4'd0:Dout=8'b1100_0000;
+        4'd1:Dout=8'b1111_1001;
+        4'd2:Dout=8'b1010_0100;
+        4'd3:Dout=8'b1011_0000;
+        4'd4:Dout=8'b1001_1001;
+        4'd5:Dout=8'b1001_0010;
+        4'd6:Dout=8'b1000_0010;
+        4'd7:Dout=8'b1111_1000;
+        4'd8:Dout=8'b1000_0000;
+        4'd9:Dout=8'b1001_0000;
+        default:Dout=8'b1111_1111;
+    endcase
+end
+
+endmodule

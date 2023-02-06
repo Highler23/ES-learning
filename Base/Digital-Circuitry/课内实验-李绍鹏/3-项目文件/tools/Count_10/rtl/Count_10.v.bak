@@ -1,0 +1,4 @@
+/**
+ * @file		十进制计数器
+ */
+module Count_10 (clk,reset,control,Nout,Cy);

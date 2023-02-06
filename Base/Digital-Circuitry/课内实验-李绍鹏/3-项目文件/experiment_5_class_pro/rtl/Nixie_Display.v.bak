@@ -1,0 +1,14 @@
+module Nixie_Display(cp,LED_bit,LED_SEG);
+
+input cp;
+output [7:0]LED_bit;
+output [7:0]LED_SEG;
+wire clk_400hz;
+wire [2:0]scan_cnt;
+wire [3:0]Data_BCD;
+div U1(.clk(cp),.f0(clk_400hz));
+cnt2 U2(.clk(clk_400hz),.Q(scan_cnt));
+Encode_3_8 U3(.A(scan_cnt),.F(LED_bit));
+mux_8_1 U4(.SEL(scan_cnt),.A(4'b1000),.B(4'b0111),.C(4'b0110),.D(4'b0101),.E(4'b0100),.F(4'b0011),.G(4'b0010),.H(4'b0001),.Y(Data_BCD));
+BCD_7SEG U5(.BCD(Data_BCD),.SEG(LED_SEG));
+endmodule

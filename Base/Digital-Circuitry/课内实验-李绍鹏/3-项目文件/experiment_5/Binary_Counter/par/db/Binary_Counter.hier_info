@@ -1,0 +1,9 @@
+|Binary_Counter
+clk => Cy~reg0.CLK
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Cy <= Cy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

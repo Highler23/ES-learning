@@ -1,0 +1,12 @@
+module COMPARE(clk,A,B,F);
+input [7:0] B,A;
+input clk;
+output reg F;
+always @(posedge clk)
+begin 
+if(A>B)
+F=1;
+else
+F=0;
+end
+endmodule

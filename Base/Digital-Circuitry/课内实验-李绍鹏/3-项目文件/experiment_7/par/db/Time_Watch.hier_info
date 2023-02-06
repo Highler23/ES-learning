@@ -1,0 +1,219 @@
+|Time_Watch
+cp => cp.IN1
+S5 => S5.IN1
+S6 => S6.IN1
+LED_Bit[0] <= Decoder_3_8:U4.Pout
+LED_Bit[1] <= Decoder_3_8:U4.Pout
+LED_Bit[2] <= Decoder_3_8:U4.Pout
+LED_Bit[3] <= Decoder_3_8:U4.Pout
+LED_Bit[4] <= Decoder_3_8:U4.Pout
+LED_Bit[5] <= Decoder_3_8:U4.Pout
+LED_Bit[6] <= Decoder_3_8:U4.Pout
+LED_Bit[7] <= Decoder_3_8:U4.Pout
+LED_SEG[0] <= BCD_7_SEG:U6.SEG
+LED_SEG[1] <= BCD_7_SEG:U6.SEG
+LED_SEG[2] <= BCD_7_SEG:U6.SEG
+LED_SEG[3] <= BCD_7_SEG:U6.SEG
+LED_SEG[4] <= BCD_7_SEG:U6.SEG
+LED_SEG[5] <= BCD_7_SEG:U6.SEG
+LED_SEG[6] <= BCD_7_SEG:U6.SEG
+LED_SEG[7] <= BCD_7_SEG:U6.SEG
+
+
+|Time_Watch|Divider:U1
+clk => fout2~reg0.CLK
+clk => count2[0].CLK
+clk => count2[1].CLK
+clk => count2[2].CLK
+clk => count2[3].CLK
+clk => count2[4].CLK
+clk => count2[5].CLK
+clk => count2[6].CLK
+clk => count2[7].CLK
+clk => count2[8].CLK
+clk => count2[9].CLK
+clk => count2[10].CLK
+clk => count2[11].CLK
+clk => count2[12].CLK
+clk => count2[13].CLK
+clk => count2[14].CLK
+clk => count2[15].CLK
+fout1 <= <GND>
+fout2 <= fout2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Time_Watch|Time_Counter:U2
+clk => num5[0]~reg0.CLK
+clk => num5[1]~reg0.CLK
+clk => num5[2]~reg0.CLK
+clk => num5[3]~reg0.CLK
+clk => num4[0]~reg0.CLK
+clk => num4[1]~reg0.CLK
+clk => num4[2]~reg0.CLK
+clk => num4[3]~reg0.CLK
+clk => num3[0]~reg0.CLK
+clk => num3[1]~reg0.CLK
+clk => num3[2]~reg0.CLK
+clk => num3[3]~reg0.CLK
+clk => num2[0]~reg0.CLK
+clk => num2[1]~reg0.CLK
+clk => num2[2]~reg0.CLK
+clk => num2[3]~reg0.CLK
+clk => num1[0]~reg0.CLK
+clk => num1[1]~reg0.CLK
+clk => num1[2]~reg0.CLK
+clk => num1[3]~reg0.CLK
+control => always0.IN0
+reset => num1.OUTPUTSELECT
+reset => num1.OUTPUTSELECT
+reset => num1.OUTPUTSELECT
+reset => num1.OUTPUTSELECT
+reset => num2.OUTPUTSELECT
+reset => num2.OUTPUTSELECT
+reset => num2.OUTPUTSELECT
+reset => num2.OUTPUTSELECT
+reset => num3.OUTPUTSELECT
+reset => num3.OUTPUTSELECT
+reset => num3.OUTPUTSELECT
+reset => num3.OUTPUTSELECT
+reset => num4.OUTPUTSELECT
+reset => num4.OUTPUTSELECT
+reset => num4.OUTPUTSELECT
+reset => num4.OUTPUTSELECT
+reset => num5.OUTPUTSELECT
+reset => num5.OUTPUTSELECT
+reset => num5.OUTPUTSELECT
+reset => num5.OUTPUTSELECT
+reset => always0.IN1
+num1[0] <= num1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num1[1] <= num1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num1[2] <= num1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num1[3] <= num1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num2[0] <= num2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num2[1] <= num2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num2[2] <= num2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num2[3] <= num2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num3[0] <= num3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num3[1] <= num3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num3[2] <= num3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num3[3] <= num3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num4[0] <= num4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num4[1] <= num4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num4[2] <= num4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num4[3] <= num4[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num5[0] <= num5[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num5[1] <= num5[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num5[2] <= num5[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+num5[3] <= num5[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Time_Watch|Tube:U3
+clk => tube[0]~reg0.CLK
+clk => tube[1]~reg0.CLK
+clk => tube[2]~reg0.CLK
+tube[0] <= tube[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tube[1] <= tube[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tube[2] <= tube[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Time_Watch|Decoder_3_8:U4
+val[0] => Equal0.IN2
+val[0] => Equal1.IN0
+val[0] => Equal2.IN2
+val[0] => Equal3.IN1
+val[0] => Equal4.IN2
+val[0] => Equal5.IN1
+val[0] => Equal6.IN2
+val[0] => Equal7.IN2
+val[1] => Equal0.IN1
+val[1] => Equal1.IN2
+val[1] => Equal2.IN0
+val[1] => Equal3.IN0
+val[1] => Equal4.IN1
+val[1] => Equal5.IN2
+val[1] => Equal6.IN1
+val[1] => Equal7.IN1
+val[2] => Equal0.IN0
+val[2] => Equal1.IN1
+val[2] => Equal2.IN1
+val[2] => Equal3.IN2
+val[2] => Equal4.IN0
+val[2] => Equal5.IN0
+val[2] => Equal6.IN0
+val[2] => Equal7.IN0
+Pout[0] <= Pout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[1] <= Pout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[2] <= Pout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[3] <= Pout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[4] <= Pout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[5] <= Pout[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[6] <= Pout[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[7] <= Pout[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Time_Watch|Selector_5_1:U5
+SEL[0] => Mux0.IN2
+SEL[0] => Mux1.IN2
+SEL[0] => Mux2.IN2
+SEL[0] => Mux3.IN2
+SEL[1] => Mux0.IN1
+SEL[1] => Mux1.IN1
+SEL[1] => Mux2.IN1
+SEL[1] => Mux3.IN1
+SEL[2] => Mux0.IN0
+SEL[2] => Mux1.IN0
+SEL[2] => Mux2.IN0
+SEL[2] => Mux3.IN0
+A0[0] => Mux3.IN3
+A0[0] => Mux3.IN4
+A0[0] => Mux3.IN5
+A0[0] => Mux3.IN6
+A0[1] => Mux2.IN3
+A0[1] => Mux2.IN4
+A0[1] => Mux2.IN5
+A0[1] => Mux2.IN6
+A0[2] => Mux1.IN3
+A0[2] => Mux1.IN4
+A0[2] => Mux1.IN5
+A0[2] => Mux1.IN6
+A0[3] => Mux0.IN3
+A0[3] => Mux0.IN4
+A0[3] => Mux0.IN5
+A0[3] => Mux0.IN6
+A1[0] => Mux3.IN7
+A1[1] => Mux2.IN7
+A1[2] => Mux1.IN7
+A1[3] => Mux0.IN7
+A2[0] => Mux3.IN8
+A2[1] => Mux2.IN8
+A2[2] => Mux1.IN8
+A2[3] => Mux0.IN8
+A3[0] => Mux3.IN9
+A3[1] => Mux2.IN9
+A3[2] => Mux1.IN9
+A3[3] => Mux0.IN9
+A4[0] => Mux3.IN10
+A4[1] => Mux2.IN10
+A4[2] => Mux1.IN10
+A4[3] => Mux0.IN10
+N[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+N[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+N[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Time_Watch|BCD_7_SEG:U6
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SEG[0] <= SEG.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= SEG.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[7] <= <VCC>
+
+

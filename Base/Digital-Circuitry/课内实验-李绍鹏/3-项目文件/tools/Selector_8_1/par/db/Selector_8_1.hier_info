@@ -1,0 +1,13 @@
+|Selector_8_1
+SEL[0] => Decoder0.IN2
+SEL[0] => Decoder1.IN1
+SEL[0] => N[0].DATAIN
+SEL[1] => Decoder0.IN1
+SEL[1] => Decoder1.IN0
+SEL[2] => Decoder0.IN0
+N[0] <= SEL[0].DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= N~0.DB_MAX_OUTPUT_PORT_TYPE
+N[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+N[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

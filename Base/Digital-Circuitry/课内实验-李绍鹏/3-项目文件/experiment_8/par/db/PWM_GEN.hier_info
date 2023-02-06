@@ -1,0 +1,115 @@
+|PWM_GEN
+clk => clk~0.IN1
+PWM_Width[0] => ~NO_FANOUT~
+PWM_Width[1] => ~NO_FANOUT~
+PWM_Width[2] => ~NO_FANOUT~
+PWM_Width[3] => ~NO_FANOUT~
+PWM_Width[4] => ~NO_FANOUT~
+PWM_Width[5] => ~NO_FANOUT~
+PWM_Width[6] => ~NO_FANOUT~
+PWM_Width[7] => ~NO_FANOUT~
+PWM_OUT <= Data_Comparator:U3.ALTB
+N[0] => N[0]~7.IN1
+N[1] => N[1]~6.IN1
+N[2] => N[2]~5.IN1
+N[3] => N[3]~4.IN1
+N[4] => N[4]~3.IN1
+N[5] => N[5]~2.IN1
+N[6] => N[6]~1.IN1
+N[7] => N[7]~0.IN1
+
+
+|PWM_GEN|Count_256:U2
+clk => EN~reg0.CLK
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+clk => count[4]~reg0.CLK
+clk => count[5]~reg0.CLK
+clk => count[6]~reg0.CLK
+clk => count[7]~reg0.CLK
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN <= EN~reg0.DB_MAX_OUTPUT_PORT_TYPE
+N[0] => Equal0.IN7
+N[1] => Equal0.IN6
+N[2] => Equal0.IN5
+N[3] => Equal0.IN4
+N[4] => Equal0.IN3
+N[5] => Equal0.IN2
+N[6] => Equal0.IN1
+N[7] => Equal0.IN0
+
+
+|PWM_GEN|Register:U4
+EN => set[0]~reg0.CLK
+EN => set[1]~reg0.CLK
+EN => set[2]~reg0.CLK
+EN => set[3]~reg0.CLK
+EN => set[4]~reg0.CLK
+EN => set[5]~reg0.CLK
+EN => set[6]~reg0.CLK
+EN => set[7]~reg0.CLK
+set[0] <= set[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[1] <= set[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[2] <= set[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[3] <= set[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[4] <= set[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[5] <= set[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[6] <= set[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+set[7] <= set[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+width[0] => set[0]~reg0.DATAIN
+width[1] => set[1]~reg0.DATAIN
+width[2] => set[2]~reg0.DATAIN
+width[3] => set[3]~reg0.DATAIN
+width[4] => set[4]~reg0.DATAIN
+width[5] => set[5]~reg0.DATAIN
+width[6] => set[6]~reg0.DATAIN
+width[7] => set[7]~reg0.DATAIN
+
+
+|PWM_GEN|Data_Comparator:U3
+A[0] => LessThan0.IN16
+A[0] => LessThan1.IN16
+A[1] => LessThan0.IN15
+A[1] => LessThan1.IN15
+A[2] => LessThan0.IN14
+A[2] => LessThan1.IN14
+A[3] => LessThan0.IN13
+A[3] => LessThan1.IN13
+A[4] => LessThan0.IN12
+A[4] => LessThan1.IN12
+A[5] => LessThan0.IN11
+A[5] => LessThan1.IN11
+A[6] => LessThan0.IN10
+A[6] => LessThan1.IN10
+A[7] => LessThan0.IN9
+A[7] => LessThan1.IN9
+B[0] => LessThan0.IN8
+B[0] => LessThan1.IN8
+B[1] => LessThan0.IN7
+B[1] => LessThan1.IN7
+B[2] => LessThan0.IN6
+B[2] => LessThan1.IN6
+B[3] => LessThan0.IN5
+B[3] => LessThan1.IN5
+B[4] => LessThan0.IN4
+B[4] => LessThan1.IN4
+B[5] => LessThan0.IN3
+B[5] => LessThan1.IN3
+B[6] => LessThan0.IN2
+B[6] => LessThan1.IN2
+B[7] => LessThan0.IN1
+B[7] => LessThan1.IN1
+AGTB <= AGTB~0.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB~0.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

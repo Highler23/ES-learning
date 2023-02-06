@@ -1,0 +1,213 @@
+Simulator report for Seg
+Sun Nov 06 22:48:43 2022
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 42 nodes     ;
+; Simulation Coverage         ;      78.57 % ;
+; Total Number of Transitions ; 2734         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                   ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                      ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                       ;               ;
+; Vector input source                                                                        ; H:/code/digital-electronic-technology/lab/experiment_3_plus/par/output_files/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                        ; On            ;
+; Check outputs                                                                              ; Off                                                                                       ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                        ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                        ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                        ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                        ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                       ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                       ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                       ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                       ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                       ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                       ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                        ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                       ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                       ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                      ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      78.57 % ;
+; Total nodes checked                                 ; 42           ;
+; Total output ports checked                          ; 42           ;
+; Total output ports with complete 1/0-value coverage ; 33           ;
+; Total output ports with no 1/0-value coverage       ; 9            ;
+; Total output ports with no 1-value coverage         ; 9            ;
+; Total output ports with no 0-value coverage         ; 9            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------+
+; Complete 1/0-Value Coverage                            ;
++------------------+------------------+------------------+
+; Node Name        ; Output Port Name ; Output Port Type ;
++------------------+------------------+------------------+
+; |Seg|WideOr0     ; |Seg|WideOr0     ; out0             ;
+; |Seg|WideOr1     ; |Seg|WideOr1     ; out0             ;
+; |Seg|WideOr2     ; |Seg|WideOr2     ; out0             ;
+; |Seg|WideOr3     ; |Seg|WideOr3     ; out0             ;
+; |Seg|WideOr4     ; |Seg|WideOr4     ; out0             ;
+; |Seg|WideOr5     ; |Seg|WideOr5     ; out0             ;
+; |Seg|WideOr6     ; |Seg|WideOr6     ; out0             ;
+; |Seg|D[0]        ; |Seg|D[0]        ; out              ;
+; |Seg|D[1]        ; |Seg|D[1]        ; out              ;
+; |Seg|D[2]        ; |Seg|D[2]        ; out              ;
+; |Seg|D[3]        ; |Seg|D[3]        ; out              ;
+; |Seg|Dout[0]     ; |Seg|Dout[0]     ; pin_out          ;
+; |Seg|Dout[1]     ; |Seg|Dout[1]     ; pin_out          ;
+; |Seg|Dout[2]     ; |Seg|Dout[2]     ; pin_out          ;
+; |Seg|Dout[3]     ; |Seg|Dout[3]     ; pin_out          ;
+; |Seg|Dout[4]     ; |Seg|Dout[4]     ; pin_out          ;
+; |Seg|Dout[5]     ; |Seg|Dout[5]     ; pin_out          ;
+; |Seg|Dout[6]     ; |Seg|Dout[6]     ; pin_out          ;
+; |Seg|Decoder0~0  ; |Seg|Decoder0~0  ; out              ;
+; |Seg|Decoder0~1  ; |Seg|Decoder0~1  ; out              ;
+; |Seg|Decoder0~2  ; |Seg|Decoder0~2  ; out              ;
+; |Seg|Decoder0~3  ; |Seg|Decoder0~3  ; out              ;
+; |Seg|Decoder0~4  ; |Seg|Decoder0~4  ; out              ;
+; |Seg|Decoder0~5  ; |Seg|Decoder0~5  ; out              ;
+; |Seg|Decoder0~6  ; |Seg|Decoder0~6  ; out              ;
+; |Seg|Decoder0~7  ; |Seg|Decoder0~7  ; out              ;
+; |Seg|Decoder0~8  ; |Seg|Decoder0~8  ; out              ;
+; |Seg|Decoder0~9  ; |Seg|Decoder0~9  ; out              ;
+; |Seg|Decoder0~10 ; |Seg|Decoder0~10 ; out              ;
+; |Seg|Decoder0~11 ; |Seg|Decoder0~11 ; out              ;
+; |Seg|Decoder0~12 ; |Seg|Decoder0~12 ; out              ;
+; |Seg|Decoder0~13 ; |Seg|Decoder0~13 ; out              ;
+; |Seg|Decoder0~14 ; |Seg|Decoder0~14 ; out              ;
++------------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------+
+; Missing 1-Value Coverage                           ;
++--------------+------------------+------------------+
+; Node Name    ; Output Port Name ; Output Port Type ;
++--------------+------------------+------------------+
+; |Seg|Dout[7] ; |Seg|Dout[7]     ; pin_out          ;
+; |Seg|Cout[0] ; |Seg|Cout[0]     ; pin_out          ;
+; |Seg|Cout[1] ; |Seg|Cout[1]     ; pin_out          ;
+; |Seg|Cout[2] ; |Seg|Cout[2]     ; pin_out          ;
+; |Seg|Cout[3] ; |Seg|Cout[3]     ; pin_out          ;
+; |Seg|Cout[4] ; |Seg|Cout[4]     ; pin_out          ;
+; |Seg|Cout[5] ; |Seg|Cout[5]     ; pin_out          ;
+; |Seg|Cout[6] ; |Seg|Cout[6]     ; pin_out          ;
+; |Seg|Cout[7] ; |Seg|Cout[7]     ; pin_out          ;
++--------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------+
+; Missing 0-Value Coverage                           ;
++--------------+------------------+------------------+
+; Node Name    ; Output Port Name ; Output Port Type ;
++--------------+------------------+------------------+
+; |Seg|Dout[7] ; |Seg|Dout[7]     ; pin_out          ;
+; |Seg|Cout[0] ; |Seg|Cout[0]     ; pin_out          ;
+; |Seg|Cout[1] ; |Seg|Cout[1]     ; pin_out          ;
+; |Seg|Cout[2] ; |Seg|Cout[2]     ; pin_out          ;
+; |Seg|Cout[3] ; |Seg|Cout[3]     ; pin_out          ;
+; |Seg|Cout[4] ; |Seg|Cout[4]     ; pin_out          ;
+; |Seg|Cout[5] ; |Seg|Cout[5]     ; pin_out          ;
+; |Seg|Cout[6] ; |Seg|Cout[6]     ; pin_out          ;
+; |Seg|Cout[7] ; |Seg|Cout[7]     ; pin_out          ;
++--------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Sun Nov 06 22:48:43 2022
+Info: Command: quartus_sim --simulation_results_format=VWF Seg -c Seg
+Info (324025): Using vector source file "H:/code/digital-electronic-technology/lab/experiment_3_plus/par/output_files/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      78.57 %
+Info (328052): Number of transitions in simulation is 2734
+Info (324045): Vector file Seg.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4449 megabytes
+    Info: Processing ended: Sun Nov 06 22:48:43 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

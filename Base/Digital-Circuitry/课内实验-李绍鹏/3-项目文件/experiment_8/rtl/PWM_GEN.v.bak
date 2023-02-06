@@ -1,0 +1,21 @@
+/*-----------------------------------------------------
+	@file		PWM_GEN
+-----------------------------------------------------*/
+module PWM_GEN(clk,PWM_Width,PWM_OUT);
+
+input clk;
+input [7:0]PWM_Width;
+output PWM_OUT;
+
+wire [7:0]cnt,PWM_Set;
+wire EN_R,clk1000;
+
+div1000 U1(.clk(clk),.f0(clk1000));
+
+cnt8 U2(.clk(clk1000),.Q(cnt),.EN(EN_R));
+
+compare8 U3(.A(cnt),.B(PWM_Set),.ALTB(PWM_OUT));
+
+JCQ U4(.LATCH(EN_R),.Q(PWM_Set),.D(PWM_Width));
+
+endmodule

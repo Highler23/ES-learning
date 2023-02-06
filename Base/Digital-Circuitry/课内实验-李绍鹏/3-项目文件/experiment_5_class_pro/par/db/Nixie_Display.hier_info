@@ -1,0 +1,114 @@
+|Nixie_Display
+cp => cp.IN1
+LED_bit[0] <= Decoder_3_8:U3.Pout
+LED_bit[1] <= Decoder_3_8:U3.Pout
+LED_bit[2] <= Decoder_3_8:U3.Pout
+LED_bit[3] <= Decoder_3_8:U3.Pout
+LED_bit[4] <= Decoder_3_8:U3.Pout
+LED_bit[5] <= Decoder_3_8:U3.Pout
+LED_bit[6] <= Decoder_3_8:U3.Pout
+LED_bit[7] <= Decoder_3_8:U3.Pout
+LED_SEG[0] <= BCD_7_SEG:U5.SEG
+LED_SEG[1] <= BCD_7_SEG:U5.SEG
+LED_SEG[2] <= BCD_7_SEG:U5.SEG
+LED_SEG[3] <= BCD_7_SEG:U5.SEG
+LED_SEG[4] <= BCD_7_SEG:U5.SEG
+LED_SEG[5] <= BCD_7_SEG:U5.SEG
+LED_SEG[6] <= BCD_7_SEG:U5.SEG
+LED_SEG[7] <= BCD_7_SEG:U5.SEG
+
+
+|Nixie_Display|Divider:U1
+clk => fout~reg0.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => count[8].CLK
+clk => count[9].CLK
+clk => count[10].CLK
+clk => count[11].CLK
+clk => count[12].CLK
+clk => count[13].CLK
+clk => count[14].CLK
+clk => count[15].CLK
+clk => count[16].CLK
+fout <= fout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Nixie_Display|Count_8:U2
+fclk => cnt[0]~reg0.CLK
+fclk => cnt[1]~reg0.CLK
+fclk => cnt[2]~reg0.CLK
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Nixie_Display|Decoder_3_8:U3
+val[0] => Equal0.IN2
+val[0] => Equal1.IN0
+val[0] => Equal2.IN2
+val[0] => Equal3.IN1
+val[0] => Equal4.IN2
+val[0] => Equal5.IN1
+val[0] => Equal6.IN2
+val[0] => Equal7.IN2
+val[1] => Equal0.IN1
+val[1] => Equal1.IN2
+val[1] => Equal2.IN0
+val[1] => Equal3.IN0
+val[1] => Equal4.IN1
+val[1] => Equal5.IN2
+val[1] => Equal6.IN1
+val[1] => Equal7.IN1
+val[2] => Equal0.IN0
+val[2] => Equal1.IN1
+val[2] => Equal2.IN1
+val[2] => Equal3.IN2
+val[2] => Equal4.IN0
+val[2] => Equal5.IN0
+val[2] => Equal6.IN0
+val[2] => Equal7.IN0
+Pout[0] <= Pout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[1] <= Pout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[2] <= Pout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[3] <= Pout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[4] <= Pout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[5] <= Pout[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[6] <= Pout[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Pout[7] <= Pout[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Nixie_Display|Selector_8_1:U4
+SEL[0] => Decoder0.IN2
+SEL[0] => Decoder1.IN1
+SEL[0] => N[0].DATAIN
+SEL[1] => Decoder0.IN1
+SEL[1] => Decoder1.IN0
+SEL[2] => Decoder0.IN0
+N[0] <= SEL[0].DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= N.DB_MAX_OUTPUT_PORT_TYPE
+N[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+N[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Nixie_Display|BCD_7_SEG:U5
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+SEG[0] <= SEG.DB_MAX_OUTPUT_PORT_TYPE
+SEG[1] <= SEG.DB_MAX_OUTPUT_PORT_TYPE
+SEG[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SEG[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SEG[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SEG[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+SEG[7] <= <VCC>
+
+

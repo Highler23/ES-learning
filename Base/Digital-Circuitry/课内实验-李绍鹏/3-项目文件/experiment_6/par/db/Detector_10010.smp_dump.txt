@@ -1,0 +1,9 @@
+
+State Machine - |Detector_10010|current_state
+Name current_state.IDLE current_state.E current_state.D current_state.C current_state.B current_state.A 
+current_state.IDLE 0 0 0 0 0 0 
+current_state.A 1 0 0 0 0 1 
+current_state.B 1 0 0 0 1 0 
+current_state.C 1 0 0 1 0 0 
+current_state.D 1 0 1 0 0 0 
+current_state.E 1 1 0 0 0 0 

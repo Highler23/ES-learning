@@ -1,0 +1,19 @@
+module PWM(clk,PWM_IN,PWM_OUT,select,clkHZ);
+input clk;
+input [7:0] PWM_IN;
+input [1:0] select;
+output PWM_OUT;
+wire [7:0] cnt,PWM_Set;
+wire EN_R,clk_256kHZ;
+output wire clkHZ;
+
+//div U1 (.clk(clk),.f0(clk_256kHZ));
+divchange(.clk(clk),.f0(clkHZ),.select(select));
+
+cnt256 U2 (.clk(clkHZ),.EN(EN_R),.Q(cnt));//(.clk(clk_256kHZ),.EN(EN_R),.Q(cnt));
+
+Register U3 (.EN(EN_R),.D(PWM_IN),.Q(PWM_Set));
+
+COMPARE U4 (.A(cnt),.B(PWM_Set),.F1(PWM_OUT),.F2(),.F3());
+
+endmodule
